@@ -1,0 +1,154 @@
+# ==============================================================================
+# Olist Intelligence Platform - Comprehensive Production .gitignore
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Environment Variables & Credentials (CRITICAL - Never Commit)
+# ------------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.env
+*.env.*
+
+# Streamlit Local Secrets & Config
+.streamlit/secrets.toml
+.streamlit/config.toml
+
+# ------------------------------------------------------------------------------
+# 2. Virtual Environments & Packages
+# ------------------------------------------------------------------------------
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+bin/
+lib/
+include/
+Scripts/
+pip-wheel-metadata/
+
+# ------------------------------------------------------------------------------
+# 3. Python Bytecode, Caches & Compilations
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ------------------------------------------------------------------------------
+# 4. Jupyter Notebooks & Data Science Checkpoints
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+*.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# ------------------------------------------------------------------------------
+# 5. Heavy Datasets & Raw Files (Keep Git Lightweight)
+# ------------------------------------------------------------------------------
+data/raw/
+data/interim/
+data/processed/
+*.csv
+*.tsv
+*.xlsx
+*.parquet
+*.feather
+*.h5
+*.zip
+*.tar.gz
+*.rar
+*.7z
+
+# Processed folder exception (agar processed directory me koi specific meta-file track karni ho)
+# !data/processed/
+
+# ------------------------------------------------------------------------------
+# 6. ML Model Artifacts Exception Handling
+# ------------------------------------------------------------------------------
+# General model formats ignore karein agar testing dumps ho
+*.pt
+*.pth
+*.onnx
+
+# NOTE: App ko deploy karne ke liye models/ directory ke trained .pkl files zaroori hain.
+# Agar aapka model file size GitHub limit (< 100MB) ke andar hai, toh yeh exception track hone dega:
+!models/*.pkl
+
+# ------------------------------------------------------------------------------
+# 7. Operating System Artifacts
+# ------------------------------------------------------------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# ------------------------------------------------------------------------------
+# 8. Editors & IDEs Configuration
+# ------------------------------------------------------------------------------
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------------------------------------------------------------
+# 9. Logs & Runtime Temp Files
+# ------------------------------------------------------------------------------
+*.log
+logs/
+*.pid
+*.seed
+*.pid.lock
