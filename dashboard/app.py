@@ -76,8 +76,15 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Environment Endpoints
-SATISFACTION_API_URL = os.getenv("SATISFACTION_API_URL", "http://localhost:8000/predict/satisfaction")
-REPEAT_PURCHASE_API_URL = os.getenv("REPEAT_PURCHASE_API_URL", "http://localhost:8000/predict/repeat-purchase")
+SATISFACTION_API_URL = os.getenv(
+    "SATISFACTION_API_URL", 
+    "https://olist-customer-intelligence.onrender.com/predict/satisfaction"
+)
+
+REPEAT_PURCHASE_API_URL = os.getenv(
+    "REPEAT_PURCHASE_API_URL", 
+    "https://olist-customer-intelligence.onrender.com/predict/repeat-purchase"
+)
 
 # ==========================================
 # SIDEBAR: Metadata
