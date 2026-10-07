@@ -10,6 +10,11 @@
 [![License](https://img.shields.io/badge/License-MIT-black?style=for-the-badge)](#)
 
 ---
+# Live demo
+
+URL = https://olist-customer-intelligence-dashboard.streamlit.app/
+
+---
 
 ## 📌 Table of Contents
 
@@ -29,10 +34,6 @@
 - [Production Considerations](#-production-considerations)
 - [License](#-license)
 
----
-# Live demo
-
-URL = https://olist-customer-intelligence-dashboard.streamlit.app/
 ---
 
 ## 🔎 Overview
